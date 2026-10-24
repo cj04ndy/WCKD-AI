@@ -1,0 +1,70 @@
+# Migration / local archives
+MIGRATION-BACKUP/
+
+# Python
+**/.venv/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+
+# Node / Rust build output
+**/node_modules/
+**/dist/
+**/target/
+**/*.tsbuildinfo
+
+# Runtime state
+**/logs/
+**/backups/
+**/benchmarks/
+**/agent-runner/
+**/orchestrator/jobs/
+**/workspace/
+**/open-webui-data/
+**/brave-wckd-profile/
+**/router-state.json
+**/wckd-ui-state.json
+**/model-manager/state.json
+**/*.log
+**/*.tmp
+**/*.pid
+**/*.bak
+
+# Project Memory / local databases
+**/*.db
+**/*.db-wal
+**/*.db-shm
+
+# Secrets
+**/secrets/
+**/.webui_secret_key
+**/.env
+**/.env.*
+!**/.env.example
+**/credentials.json
+**/secrets.json
+**/*.pem
+**/*.key
+**/*.pfx
+**/*.p12
+
+# Models / weights
+**/models/
+**/checkpoints/
+**/*.gguf
+**/*.safetensors
+**/*.ckpt
+**/*.pt
+**/*.pth
+**/*.onnx
+**/*.engine
+**/*.bin
+
+# OS / editor
+.DS_Store
+Thumbs.db
+**/.vscode/
+**/.idea/
+**/src-tauri/gen/

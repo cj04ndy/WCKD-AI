@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "registry_version": "1.0.0",
+  "updated": "2026-10-21T18:15:51+03:00",
+  "specialists": [
+    {
+      "id": "GENERAL",
+      "display_name": "General",
+      "enabled": true,
+      "description": "Default general-purpose WCKD specialist.",
+      "preferred_model": "qwen3.5:9b",
+      "fallback_models": [
+        "nemotron-3-nano:4b",
+        "gpt-oss:20b"
+      ],
+      "route_mode": "/balanced",
+      "tools_policy": "none",
+      "temperature": 0.6,
+      "max_steps": 0,
+      "tags": [
+        "general",
+        "chat"
+      ]
+    },
+    {
+      "id": "CODE",
+      "display_name": "Code",
+      "enabled": true,
+      "description": "Programming, debugging, refactoring and code analysis.",
+      "preferred_model": "gpt-oss:20b",
+      "fallback_models": [
+        "qwen3.5:9b",
+        "nemotron-3-nano:4b"
+      ],
+      "route_mode": "/code",
+      "tools_policy": "safe-tools",
+      "temperature": 0.2,
+      "max_steps": 0,
+      "tags": [
+        "code",
+        "debug",
+        "development"
+      ]
+    },
+    {
+      "id": "REASONING",
+      "display_name": "Reasoning",
+      "enabled": true,
+      "description": "Hard analysis, diagnostics, architecture and planning.",
+      "preferred_model": "gpt-oss:20b",
+      "fallback_models": [
+        "qwen3.5:9b",
+        "nemotron-3-nano:4b"
+      ],
+      "route_mode": "/smart",
+      "tools_policy": "none",
+      "temperature": 0.3,
+      "max_steps": 0,
+      "tags": [
+        "reasoning",
+        "analysis",
+        "architecture"
+      ]
+    },
+    {
+      "id": "WRITING",
+      "display_name": "Writing",
+      "enabled": true,
+      "description": "Rewriting, summarization and language tasks.",
+      "preferred_model": "qwen3.5:9b",
+      "fallback_models": [
+        "nemotron-3-nano:4b",
+        "gpt-oss:20b"
+      ],
+      "route_mode": "/write",
+      "tools_policy": "none",
+      "temperature": 0.7,
+      "max_steps": 0,
+      "tags": [
+        "writing",
+        "summary",
+        "language"
+      ]
+    },
+    {
+      "id": "TOOLS",
+      "display_name": "Tools",
+      "enabled": true,
+      "description": "Narrow, low-risk structured tool execution.",
+      "preferred_model": "nemotron-3-nano:4b",
+      "fallback_models": [
+        "qwen3.5:9b"
+      ],
+      "route_mode": "/tools",
+      "tools_policy": "safe-tools",
+      "temperature": 0.1,
+      "max_steps": 0,
+      "tags": [
+        "tools",
+        "structured",
+        "fast"
+      ]
+    },
+    {
+      "id": "AGENTIC",
+      "display_name": "Agentic",
+      "enabled": true,
+      "description": "Multi-step autonomous work through WCKD Agent Runner.",
+      "preferred_model": "qwen3.5:9b",
+      "fallback_models": [
+        "gpt-oss:20b",
+        "nemotron-3-nano:4b"
+      ],
+      "route_mode": "/agentic",
+      "tools_policy": "agentic",
+      "temperature": 0.2,
+      "max_steps": 180,
+      "tags": [
+        "agent",
+        "multi-step",
+        "tools"
+      ]
+    }
+  ]
+}
